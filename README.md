@@ -1,4 +1,6 @@
 # 자바스크립트 정리
+# 목차
+1. [변수와 타입](https://github.com/Yeongjae-Shin/JavaScriptSummary#%EB%B3%80%EC%88%98%EC%99%80-%ED%83%80%EC%9E%85)
 ## 변수와 타입
 - 변수는 상황에 따라 변할 수 있는 값
   - 변수 선언 👉 선언은 한번만 한다
