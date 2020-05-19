@@ -8,6 +8,7 @@
 6. [배열의 반복](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%B0%B0%EC%97%B4%EC%9D%98-%EB%B0%98%EB%B3%B5)
 7. [객체](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EA%B0%9D%EC%B2%B4)
 8. [배열의 메서드](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EA%B0%9D%EC%B2%B4)
+9. [reduce]()
 ## 변수와 타입
 - 변수는 상황에 따라 변할 수 있는 값
   - 변수 선언 ➡️ 선언은 한번만 한다
@@ -260,6 +261,49 @@
       } // 10
       ```
       초기화와 증감문이 필요없을 때 `while`을 사용하면 좋음
+    - forEach 구문 (명령형 반복문을 함수형으로 작성하기)
+    **함수를 인자로 받음**
+      ```js
+      let users = [
+        { name: 'Tim', age: 40 },
+        { name: 'Satya', age: 30 },
+        { name: 'Sundar', age: 50 }
+      ];
+      // 이름을 출력하기 위해 for문 사용
+      for (let i = 0; i < users.length; i++) {
+        console.log('Name: ' + users[i].name);
+      } // Name: Tim Name: Satya Name: Sundar
+      // 이것을 간단하게 함수 정의와 forEach로 구현 가능
+      function printName (user) {
+        console.log('Name: ' + user.name);
+      }
+      user.forEach(printName); // Name: Tim Name: Satya Name: Sundar
+      ```
+    - for...in 구문 (객체의 프로퍼티를 순환할 때)
+      - 기본 형태
+        ```js
+        for (let 변수 in 객체) {
+          // 구문
+        }
+        ```
+      1. for...in 구문의 본문은 객체의 각 프로퍼티에 대해 한번씩 실행된다.
+      2. 각 반복에 앞서 객체 프로퍼티 중 하나의 이름이 변수에 문자열 타입으로 할당된다.
+      - 객체를 받고 이차원 배열로 변환하는 함수
+        ```js
+        function convertObjectToList (obj) {
+          let result = []; // 이차원 배열로 변환해야 하니 빈 배열 생성
+          for (let key in obj) { // 주어진 객체에서 각 key 탐색
+            result.push([key, obj[key]]) // 빈 배열에 [key, value] 형태로 push
+          }
+          return result;
+        }
+        // 예시
+        let obj = [10, 11, 12];
+        for (let key in obj) {
+          console.log('name: ' + key + '; value: ' + obj[key]);
+        }
+        // name: 0; value: 10 name: 1; value: 11 name: 2; value: 12
+        ```
 
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 배열의 반복
@@ -328,6 +372,80 @@
       ```
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 배열의 메서드
-### 원본이 변하지 않는 새로운 배열 만들기 (slice)
+### 1. 원본이 변하지 않는 새로운 배열 만들기 (slice)
 1. 원본 배열은 수정되지 않는다. (immutability)
 2. arr이라는 배열에 slice를 이용해 newArr을 생성하면 arr의 뒤에 새로운 element가 추가된 형태
+  ```js
+  let arr = [1, 2, 3];
+  let newArr = arr.slice();
+  newArr; // [1, 2, 3]
+
+  newArr.push(4); // [1, 2, 3, 4]
+  arr; // [1, 2, 3]
+  ```
+3. 시작점과 끝나는 점을 설정하여 잘라내기
+  ```js
+  let arr = [1, 2, 3, 4];
+  arr.slice(0, 2) // [1, 2]
+  arr.slice(1, 4) // [2, 3, 4]
+  // 끝나는 점을 따로 설정하지 않으면 항상 배열의 끝까지 자름
+  // 따라서
+  arr.slice(1, 4) === arr.slice(1)
+  ```
+### 2. 특정 인덱스의 요소 제거 (splice)
+  ```js
+  let arr = [1, 2 ,3];
+  arr.splice(1[시작점], 1[삭제할 개수]) // [1, 3]
+  ```
+### 3. 배열의 형태 바꾸기 (map)
+  **기존 배열과 length는 같지만 모양이 다른 경우**
+  - 추출할 수 있는 함수
+    - users라는 배열의 객채에서 name의 값만 추출하기
+    ```js
+    let users = [
+      { name: 'Tim', age: 40 },
+      { name: 'Satya', age: 30 },
+      { name: 'Sundar', age: 50 }
+    ];
+
+    function getName (user) {
+      return user.name;
+    }
+    getName({ name: 'Tim', age: 40 }) // 이것을 3번 반복해야함
+    // 따라서
+    users.map(getName) // ['Tim', 'Satya', 'Sundar']
+    ```
+### 4. 조건에 따라 걸러내기 (filter)
+  **immutable하기 때문에 새로운 배열 return**
+  - 객체에서 나이가 40 이상인 사람 걸러내기
+  ```js
+  let users = [
+    { name: 'Tim', age: 40 },
+    { name: 'Satya', age: 30 },
+    { name: 'Sundar', age: 50 }
+  ];
+
+  let searchResults = [];
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].age > 40) {
+      searchResults.push(users[i])
+    }
+  }
+  searchResults; // { name: 'Sundar', age: 50 }
+  // filter를 이용하면
+  function moreThan40 (user) {
+    return user.age > 40
+  }
+  users.filter(moreThan40) // [{ name: 'Sundar', age: 50 }]
+  ```
+  - 이름에 S가 들어간 사람을 찾을 때
+  ```js
+  function includeS (user) {
+    return user.name.indesOf('S') !== -1;
+  }
+  users.filter(includeS) // [{ name: 'Satya', age: 30 }, { name: 'Sundar', age: 50 }]
+  ```
+
+⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
+# reduce
+⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
