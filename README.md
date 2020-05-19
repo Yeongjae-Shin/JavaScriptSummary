@@ -1,6 +1,9 @@
 # 자바스크립트 정리
 # 목차
 1. [변수와 타입](https://github.com/Yeongjae-Shin/JavaScriptSummary#%EB%B3%80%EC%88%98%EC%99%80-%ED%83%80%EC%9E%85)
+2. [조건문](https://github.com/Yeongjae-Shin/JavaScriptSummary#%EC%A1%B0%EA%B1%B4%EB%AC%B8)
+3. [함수](https://github.com/Yeongjae-Shin/JavaScriptSummary#%ED%95%A8%EC%88%98)
+4. [배열]()
 ## 변수와 타입
 - 변수는 상황에 따라 변할 수 있는 값
   - 변수 선언 👉 선언은 한번만 한다
@@ -152,3 +155,20 @@
     // 컴퓨터에게 시킬 일
   }
   ```
+  ```js
+  // ex) 집까지 가는데 걸리는 시간
+  let timeToGoHome = function (speed, distance) {
+    let time = distance / speed;
+    console.log(time);
+  }
+  // speed와 distance를 매개변수로 둔 이유?
+  // 사람마다 조건이 다르기 때문(가변적)
+  timeToGoHome(20, 100); // 5
+  ```
+  - 함수 바깥으로 결과를 가져오려면?
+  ```js
+  console.log(time); // ReferenceError
+  let myTime = timeToGoHome(20, 100);
+  console.log(myTime); // undefined myTime의 값이 없기 때문
+  ```
+  - `return`을 사용하면 출력이 된다.
