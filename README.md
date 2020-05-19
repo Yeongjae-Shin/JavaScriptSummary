@@ -449,6 +449,7 @@
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 # reduce (꽤 어려움)
 - reduce의 작동 원리: 배열 축소
+
   array.reduce(reducer, [initalValue])
   - 전달 인자: 리듀서, 초기값
   ➡️ 리듀서 함수는 리턴값이 필요하며, 다음번 리듀서 호출 시 첫 번째 파라미터로 전달됨
