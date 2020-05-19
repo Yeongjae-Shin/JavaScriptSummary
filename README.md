@@ -478,4 +478,26 @@
     |2번째 호출|1|2|2|[0, 1, 2, 3, 4]|3|
     |3번째 호출|3|3|3|[0, 1, 2, 3, 4]|6|
     |4번째 호출|6|4|4|[0, 1, 2, 3, 4]|10|
+    
+- 배열에서 문자열로 변형
+  ```js
+  let users = [
+    { name: 'Tim', age: 40 },
+    { name: 'Satya', age: 30 },
+    { name: 'Sundar', age: 50 }
+  ];
+
+  let resultStr = '';
+  for (let i = 0; i < users.length; i++) {
+    resultStr = resultStr + users[i].name + ', ';
+    return resultStr
+  } // 'Tim, Satya, Sundar'
+  // reduce 활용
+  function joinName (resultStr, user) {
+    resultStr = resultStr + user.name + ', ';
+    return resultStr;
+  }
+  users.reduce(joinName, ''); // 'Tim, Satya, Sundar'
+  ```
+  
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
