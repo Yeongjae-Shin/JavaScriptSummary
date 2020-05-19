@@ -60,7 +60,7 @@
     city: 'Seoul'
   };
   ```
-  
+⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)  
 ## 조건문
   1. 조건문을 배우기 위해선 Boolean 타입에 대한 이해 필요
   2. 조건문은 조건을 판별하는 기준을 만드는 것
