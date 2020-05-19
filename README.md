@@ -60,7 +60,7 @@
     city: 'Seoul'
   };
   ```
-⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)  
+⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 조건문
   1. 조건문을 배우기 위해선 Boolean 타입에 대한 이해 필요
   2. 조건문은 조건을 판별하는 기준을 만드는 것
@@ -132,7 +132,7 @@
   6. if (' ')
   // 위 6가지는 if문에서 false로 변환됨
   ```
-
+⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 함수
   1. 함수는 컴퓨터에게 일을 시키기 위한 지시사항의 묶음
   2. 함수는 입력 👉 함수 👉 출력의 과정으로 이루어짐
@@ -173,7 +173,7 @@
   console.log(myTime); // undefined myTime의 값이 없기 때문
   ```
   - `return`을 사용하면 출력이 된다.
-
+⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 배열
 1. 배열은 순서가 있는 값이다.
 2. 순서와 값은 각각 `index`와 `element`로 부른다.
@@ -228,4 +228,5 @@
     Array.isArray(myNumber) // true
     // Array.isArray 메서드는 항상 boolean값 리턴
     ```
+⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 반복문
