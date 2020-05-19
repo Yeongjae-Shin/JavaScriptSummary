@@ -232,6 +232,7 @@
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 반복문
   - 반복문이란?
+  
     ➡️ 같거나 비슷한 코드를 여러 번 실행시켜야 할 경우에 쓰는 구문
   - 반복문의 종류
     - for 구문
