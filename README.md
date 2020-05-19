@@ -478,7 +478,7 @@
     |2번째 호출|1|2|2|[0, 1, 2, 3, 4]|3|
     |3번째 호출|3|3|3|[0, 1, 2, 3, 4]|6|
     |4번째 호출|6|4|4|[0, 1, 2, 3, 4]|10|
-    
+
 - 배열에서 문자열로 변형
   ```js
   let users = [
@@ -498,9 +498,43 @@
     resultStr = resultStr + user.name + ', ';
     return resultStr;
   }
-  
+
   users.reduce(joinName, '');
   // 'Tim, Satya, Sundar'
   ```
-  
+- 배열에서 객체로 변형 (reduce로 주소록 객체 만들어보기)
+  ```js
+  let users = [
+    { name: 'Tim', age: 40 },
+    { name: 'Satya', age: 30 },
+    { name: 'Sundar', age: 50 }
+  ];
+
+  // 1. 이름의 첫 번째 글자로 색인(key)을 만든다.
+  // 2. 만약 key가 없으면, 해당 배열을 만들고 사람 추가
+  // 3. 만약 key가 있으면, 해당 배열에 사람 추가
+
+  function makeAddressBook (addressBook, user) {
+    // 1. 이름의 첫 번째 글자로 색인(key)을 만든다.
+    let firstLetter = user.name[0];
+    // addressBook의 형태는 객체
+    if (firstLetter in addressBook) {
+      // 3. 만약 key가 있으면, 해당 배열에 사람 추가
+      addressBook[firstLetter].push(user);
+    } else {
+      // 2. 만약 key가 없으면, 해당 배열을 만들고 사람 추가
+      addressBook[firstLetter] = [];
+      addressBook[firstLetter].push(user);
+    }
+    return addressBook;
+  }
+
+  // return 값
+  {
+    T: [{ name: 'Tim', age: 40 }],
+    S: [{ name: 'Satya', age: 30 },
+        { name: 'Sundar', age: 50 }]
+  }
+  ```
+
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
