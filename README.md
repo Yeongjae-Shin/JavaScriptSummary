@@ -232,12 +232,12 @@
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 반복문
   - 반복문이란?
-  
+
     ➡️ 같거나 비슷한 코드를 여러 번 실행시켜야 할 경우에 쓰는 구문
   - 반복문의 종류
     - for 구문
       반복할 조건을 `초기화`, `조건식`, `증감문` 순으로 넣어준다
-      
+
       이 때 시작 조건은 `i`로 설정하는것이 좋다. `index`에서 `i`를 따왔기 때문
       `i`, `j` ... 순으로 설정
       ```js
@@ -276,5 +276,56 @@
       sum = sum + myNum[i];
     } // 80
     ```
-    
+
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
+## 객체
+객체는 키와 값으로 이루어져 있고, 그 사이는 콜론(:)으로 구분한다. 중괄호를 이용하여 객체를 생성하고 각 개체는 쉼표(,)로 구분
+  - 객체의 값을 사용하는 방법
+    - Dot notation
+      ```js
+      let user = {
+        name: 'Steve',
+        city: 'Seoul'
+      };
+      user.name // 'Steve'
+      user.city // 'Seoul'
+      ```
+    - Bracket notation ➡️ 키 값이 동적일 때 반드시 사용
+      ```js
+      let user = {
+        name: 'Steve',
+        city: 'Seoul'
+      };
+      user['name'] // 'Steve'
+      user['city'] // 'Seoul'
+      user[name] // undefined
+      ```
+      이 때, 브라켓 안에는 따옴표가 반드시 있어야 함. 만약, 따옴표 없이 쓰고 싶을 땐 변수로 지정해야함.
+      ```js
+      let noQuote = 'city'
+      user[noQuote] // 'Seoul'
+      ```
+      - dot/bracket notation을 이용해 값을 추가 가능
+      ```js
+      user.isMale = true;
+      user.tags = ['JavaScript', 'TIL'];
+      user['category'] = '코딩';
+
+      user;
+      // {name: "Steve", city: "Seoul", isMale: true, tags: ['JavaScript', 'TIL'], category: "코딩"}
+      ```
+      - delete를 이용해 삭제도 가능
+      ```js
+      delete user.name;
+      // name: 'Steve' 가 없어짐
+      ```
+      - in을 이용해 해당 키가 객체에 존재하는지 확인 가능
+      ```js
+      'name' in user; // true
+      'email' in user; // false
+      ```
+⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
+## 배열의 메서드
+### 원본이 변하지 않는 새로운 배열 만들기 (slice)
+1. 원본 배열은 수정되지 않는다. (immutability)
+2. arr이라는 배열에 slice를 이용해 newArr을 생성하면 arr의 뒤에 새로운 element가 추가된 형태
