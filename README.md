@@ -236,6 +236,7 @@
   - 반복문의 종류
     - for 구문
       반복할 조건을 `초기화`, `조건식`, `증감문` 순으로 넣어준다
+      
       이 때 시작 조건은 `i`로 설정하는것이 좋다. `index`에서 `i`를 따왔기 때문
       `i`, `j` ... 순으로 설정
       ```js
@@ -256,5 +257,6 @@
       } // 10
       ```
       초기화와 증감문이 필요없을 때 `while`을 사용하면 좋음
+
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 배열의 반복
