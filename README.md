@@ -10,6 +10,7 @@
 8. [배열의 메서드](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EA%B0%9D%EC%B2%B4)
 9. [reduce](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#reduce-%EA%BD%A4-%EC%96%B4%EB%A0%A4%EC%9B%80)
 10. [Scope](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#Scope)
+11. [변수](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#Scope)
 ## 변수와 타입
 - 변수는 상황에 따라 변할 수 있는 값
   - 변수 선언 ➡️ 선언은 한번만 한다
@@ -178,6 +179,7 @@
   console.log(myTime); // undefined myTime의 값이 없기 때문
   ```
   - `return`을 사용하면 출력이 된다.
+
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 배열
 1. 배열은 순서가 있는 값이다.
@@ -223,12 +225,12 @@
     myNumber.shift(); // [98, 86, 61]
     ```
   - 맨 앞에 요소 추가
-  ```js
+    ```js
     let myNumber = [73, 98, 86, 61];
     myNumber.unshift(96) // [96, 73, 86, 61]
     ```
   - 배열인지 아닌지 판단
-  ```js
+    ```js
     let myNumber = [73, 98, 86, 61];
     Array.isArray(myNumber) // true
     // Array.isArray 메서드는 항상 boolean값 리턴
@@ -240,6 +242,7 @@
     ➡️ 같거나 비슷한 코드를 여러 번 실행시켜야 할 경우에 쓰는 구문
   - 반복문의 종류
     - for 구문
+
       반복할 조건을 `초기화`, `조건식`, `증감문` 순으로 넣어준다
 
       이 때 시작 조건은 `i`로 설정하는것이 좋다. `index`에서 `i`를 따왔기 때문
@@ -251,6 +254,7 @@
       }
       ```
     - while 구문
+
       반복할 조건 중 `초기화`, `증감문`은 따로 적고 조건식만 괄호안에 넣는다.
       ```js
       // 조건이 true일 때만 반복, false시 중단
@@ -263,6 +267,7 @@
       ```
       초기화와 증감문이 필요없을 때 `while`을 사용하면 좋음
     - forEach 구문 (명령형 반복문을 함수형으로 작성하기)
+
     **함수를 인자로 받음**
       ```js
       let users = [
@@ -287,7 +292,7 @@
           // 구문
         }
         ```
-      1. for...in 구문의 본문은 객체의 각 프로퍼티에 대해 한번씩 실행된다.
+      1. `for...in` 구문의 본문은 객체의 각 프로퍼티에 대해 한번씩 실행된다.
       2. 각 반복에 앞서 객체 프로퍼티 중 하나의 이름이 변수에 문자열 타입으로 할당된다.
       - 객체를 받고 이차원 배열로 변환하는 함수
         ```js
@@ -303,7 +308,9 @@
         for (let key in obj) {
           console.log('name: ' + key + '; value: ' + obj[key]);
         }
-        // name: 0; value: 10 name: 1; value: 11 name: 2; value: 12
+        // name: 0; value: 10
+        // name: 1; value: 11
+        // name: 2; value: 12
         ```
 
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
@@ -326,7 +333,7 @@
 
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 객체
-객체는 키와 값으로 이루어져 있고, 그 사이는 콜론(:)으로 구분한다. 중괄호를 이용하여 객체를 생성하고 각 개체는 쉼표(,)로 구분
+객체는 키와 값으로 이루어져 있고, 그 사이는 콜론`:`으로 구분한다. 중괄호를 이용하여 객체를 생성하고 각 개체는 쉼표`,`로 구분
   - 객체의 값을 사용하는 방법
     - Dot notation
       ```js
@@ -419,40 +426,41 @@
 ### 4. 조건에 따라 걸러내기 (filter)
   **immutable하기 때문에 새로운 배열 return**
   - 객체에서 나이가 40 이상인 사람 걸러내기
-  ```js
-  let users = [
-    { name: 'Tim', age: 40 },
-    { name: 'Satya', age: 30 },
-    { name: 'Sundar', age: 50 }
-  ];
+    ```js
+    let users = [
+      { name: 'Tim', age: 40 },
+      { name: 'Satya', age: 30 },
+      { name: 'Sundar', age: 50 }
+    ];
 
-  let searchResults = [];
-  for (let i = 0; i < users.length; i++) {
-    if (users[i].age > 40) {
-      searchResults.push(users[i])
+    let searchResults = [];
+    for (let i = 0; i < users.length; i++) {
+      if (users[i].age > 40) {
+        searchResults.push(users[i])
+      }
     }
-  }
-  searchResults; // { name: 'Sundar', age: 50 }
-  // filter를 이용하면
-  function moreThan40 (user) {
-    return user.age > 40
-  }
-  users.filter(moreThan40) // [{ name: 'Sundar', age: 50 }]
-  ```
+    searchResults; // { name: 'Sundar', age: 50 }
+    // filter를 이용하면
+    function moreThan40 (user) {
+      return user.age > 40
+    }
+    users.filter(moreThan40) // [{ name: 'Sundar', age: 50 }]
+    ```
   - 이름에 S가 들어간 사람을 찾을 때
-  ```js
-  function includeS (user) {
-    return user.name.indesOf('S') !== -1;
-  }
-  users.filter(includeS) // [{ name: 'Satya', age: 30 }, { name: 'Sundar', age: 50 }]
-  ```
+    ```js
+    function includeS (user) {
+      return user.name.indesOf('S') !== -1;
+    }
+    users.filter(includeS) // [{ name: 'Satya', age: 30 }, { name: 'Sundar', age: 50 }]
+    ```
 
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
-# reduce (꽤 어려움)
+## reduce (꽤 어려움)
 - reduce의 작동 원리: 배열 축소
 
   array.reduce(reducer, [initalValue])
   - 전달 인자: 리듀서, 초기값
+
   ➡️ 리듀서 함수는 리턴값이 필요하며, 다음번 리듀서 호출 시 첫 번째 파라미터로 전달됨
   - 리턴 값: 리듀서가 마지막으로 리턴하는 값
   - 리듀서의 형태
@@ -539,5 +547,102 @@
   ```
 
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
-# Scope
+## Scope
+**코드의 작동 범위를 설정하는 것**
+- Local Scope 안쪽에서 선언된 변수는 밖에서 사용할 수 없다.
+  ```js
+  let greeting = 'Hello';
+  function greetSomeone () {
+    let firstName = 'Josh';
+    return greeting + ' ' + firstName;
+  }
+
+  greetSomeone(); // 'Hello Josh'
+  firstName; // Reference Error
+  ```
+- Scope의 정의
+  1. 변수는 어떠한 환경 내에서만 사용이 가능하고, 프로그래밍 언어는 각각의 변수 접근 규칙을 가지고 있다.
+  2. 변수와 그 값이 어디부터 어디까지 유효한지 판단하는 범위이다.
+  3. JavaScript는 기본적으로 함수가 선언되는(lexical) 동시에 자신만의 scope를 가진다.
+- Local Scope vs Global Scope
+  1. Local Scope에서 Global Scope의 변수/함수에 접근 가능
+  2. Local Scope에서 정의된 변수/함수는 Global Scope에서 사용 불가
+- Scope는 중첩이 가능
+  ex) 함수 안의 함수
+- Global Scope는 최상단의 scope로 전역 변수는 어디서든 접근 가능
+- 지역변수는 함수 내에서 전역변수보다 더 높은 우선순위를 가짐
+- Function Scope vs Block Scope
+  - Block: 중괄호로 시작하고 끝나는 단위
+  ```js
+  if (true) {
+    console.log('I am in the block!');
+  }
+
+  for (let i = 0; i < 10; i++) {
+    console.log(i);
+  }
+
+  { console.log('it works!') }
+  ```
+
+⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
+## 변수
+- var vs let
+  - 변수를 정의하는 또다른 키워드 var
+    - JavaScript는 기본적으로 **함수 단위**로 자신만의 scope를 가진다.
+      ➡️ var (old way👎)
+    - 그러나 Block 단위로 scope를 구분 했을 때 예측하기 쉬운 코드를 작성할 수 있다.
+      ➡️ let
+- const
+  - **값이 변하지 않는** 변수, 즉 상수를 정의할 때 사용하는 키워드
+    - let과 동일하게 Block Scope를 따른다.
+    - 값을 재정의 하려고 하면 TypeError 출력
+- 변수 선언 키워드
+  ||let|const|var|
+  |:------:|:---:|:---:|:---:|
+  |유효 범위|Block Scope|Block Scope|Function Scope|
+  |값 재정의|가능|불가능|가능|
+  |재선언|불가능|불가능|**불**가능|
+  ➡️ var의 재선언은 가능했으나 불가능으로 바뀜
+- 전역변수와 window 객체
+  - 전역 범위를 대표하는 객체 window
+  - Global Scope에서 선언된 함수, 그리고 var 키워드를 이용해 선언된 변수는 window 객체와 연결
+  - 콘솔창에 window를 입력하면 window 객체가 출력됨
+  ```js
+  var myName = 'Paul';
+  console.log(window.myName); // 'Paul'
+
+  function foo () {
+    console.log('bar');
+  }
+  console.log(foo === window.foo); // true
+  ```
+  - 전역 범위에 너무 많은 변수를 선언하지 않도록 주의!
+    ➡️ 전역 영역은 최상위 scope이기 때문에 어디서 어떻게 이용될지 모름
+- 선언 없이 초기화된 전역 변수
+  🔥**절대로 선언 키워드(var, let, const)없이 변수를 초기화하지 말 것**🔥
+  ```js
+  function showAge () {
+    age = 90;
+    console.log(age);
+    // age는 전역 변수로 취급되어 age === window.age가 됨
+  }
+
+  showAge(); // 90
+  console.log(age); // 90
+  ```
+  - 이런 실수를 방지하고 싶을 경우 **Strict Mode** 사용
+    ```js
+    'use strict';
+    function showAge () {
+      age = 90; // 여기서 에러 발생
+        ...
+    }
+    ```
+
+⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
+## Closure (매우 어려움)
+
+
+
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
