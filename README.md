@@ -261,3 +261,20 @@
 
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 배열의 반복
+  - 반복문을 이용해 배열의 요소를 출력해보기
+    ```js
+    let myNum = [73, 98, 86, 61];
+    for (let i = 0; i < myNum.length; i++) {
+      console.log(myNum[i]);
+    }
+    ```
+  - 배열의 요소의 합 구하기
+    ```js
+    let myNum = [10, 20, 30, 40];
+    let sum = 0;
+    for (let i = 0; i < myNum.length; i++) {
+      sum = sum + myNum[i];
+    } // 80
+    ```
+    
+⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
