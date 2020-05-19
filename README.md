@@ -448,9 +448,21 @@
 
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 # reduce (꽤 어려움)
-1. reduce의 작동 원리: 배열 축소
-  - 배열에서 문자열로
-  - 배열에서 숫자로
-  - 배열에서 객체로
-  
+- reduce의 작동 원리: 배열 축소
+  array.reduce(reducer, [initalValue])
+  - 전달 인자: 리듀서, 초기값
+  ➡️ 리듀서 함수는 리턴값이 필요하며, 다음번 리듀서 호출 시 첫 번째 파라미터로 전달됨
+  - 리턴 값: 리듀서가 마지막으로 리턴하는 값
+  - 리듀서의 형태
+    ```js
+    function reducer (accumulator, value, index, array) {
+      // accumulator에 값을 누적시킴
+      return accumulator; // 새롭게 누적된 값
+    }
+    ```
+  |리듀서의 구성요소|설명|
+  |:------:|:---:|
+  |누적값|배열의 요소를 하나하나 줄여가면서 생기는 중간 과정(결과)|
+  |현재값|리듀서가 배열을 지나갈 때 만나는 배열의 요소|
+  |초기값|배열의 요소를 줄이기 전, 누적값의 초기 상태|
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
