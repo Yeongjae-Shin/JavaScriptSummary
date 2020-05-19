@@ -447,5 +447,9 @@
   ```
 
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
-# reduce
+# reduce (꽤 어려움)
+1. reduce의 작동 원리: 배열 축소
+- 배열에서 문자열로
+- 배열에서 숫자로
+- 배열에서 객체로
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
