@@ -461,8 +461,20 @@
     }
     ```
     |리듀서의 구성요소|설명|
-    |:------:|:---|
+    |:------:|:---:|
     |누적값|배열의 요소를 하나하나 줄여가면서 생기는 중간 과정(결과)|
     |현재값|리듀서가 배열을 지나갈 때 만나는 배열의 요소|
     |초기값|배열의 요소를 줄이기 전, 누적값의 초기 상태|
+  - reduce 활용 예제
+    ```js
+    [0, 1, 2, 3, 4].reduce(function (accumulator, value, index, array) {
+      return accumulator + value;
+    });
+    ```
+    |callback|accumulator|value|index|array|return|
+    |:------:|:---:|:---:|:---:|:---:|:---:|
+    |1번째 호출|0|1|1|[0, 1, 2, 3, 4]|1|
+    |2번째 호출|1|2|2|[0, 1, 2, 3, 4]|3|
+    |3번째 호출|3|3|3|[0, 1, 2, 3, 4]|6|
+    |4번째 호출|6|4|4|[0, 1, 2, 3, 4]|10|
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
