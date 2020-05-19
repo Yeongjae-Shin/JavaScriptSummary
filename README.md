@@ -492,12 +492,15 @@
     resultStr = resultStr + users[i].name + ', ';
     return resultStr
   } // 'Tim, Satya, Sundar'
+
   // reduce 활용
   function joinName (resultStr, user) {
     resultStr = resultStr + user.name + ', ';
     return resultStr;
   }
-  users.reduce(joinName, ''); // 'Tim, Satya, Sundar'
+  
+  users.reduce(joinName, '');
+  // 'Tim, Satya, Sundar'
   ```
   
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
