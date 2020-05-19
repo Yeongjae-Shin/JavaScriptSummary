@@ -5,9 +5,10 @@
 3. [함수](https://github.com/Yeongjae-Shin/JavaScriptSummary#%ED%95%A8%EC%88%98)
 4. [배열](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%B0%B0%EC%97%B4)
 5. [반복문](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%B0%98%EB%B3%B5%EB%AC%B8)
+6. [배열의 반복]()
 ## 변수와 타입
 - 변수는 상황에 따라 변할 수 있는 값
-  - 변수 선언 👉 선언은 한번만 한다
+  - 변수 선언 ➡️ 선언은 한번만 한다
   ```js
   let myName;
   ```
@@ -81,7 +82,7 @@
   - `<=` 이하
   - `===` 같다
   - `!==` 다르다
-  참고! `==`와 `!=` 엄격하게 비교 x 👉 사용 지양
+  참고! `==`와 `!=`는 엄격하게 비교 ❌ ➡️ 사용 지양
   ```js
   1 === 1 // true
   1 === '1' // false
@@ -101,19 +102,19 @@
   ```
 
 - 두 가지 조건이 한번에 적용되는 경우
-  - 논리연산자 `AND` 👉 둘 다 `true`일 경우
+  - 논리연산자 `AND` ➡️ 둘 다 `true`일 경우
     ```js
     true && true // true
     true && false // false
     false && false // false
     ```
-  - 논리연산자 `OR` 👉 둘 중 하나라도 `true`면 결과는 `true`
+  - 논리연산자 `OR` ➡️ 둘 중 하나라도 `true`면 결과는 `true`
     ```js
     true || true // true
     true || false // true
     false || false // false
     ```
-  - 논리연산자 `NOT` 👉 값을 반전시킴
+  - 논리연산자 `NOT` ➡️ 값을 반전시킴
     ```js
     !false // true
     !(3 > 2) // false
@@ -135,7 +136,7 @@
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 함수
   1. 함수는 컴퓨터에게 일을 시키기 위한 지시사항의 묶음
-  2. 함수는 입력 👉 함수 👉 출력의 과정으로 이루어짐
+  2. 함수는 입력 ➡️ 함수 ➡️ 출력의 과정으로 이루어짐
   3. JavaScript에서의 함수 사용은 함수 이름과 입력을 이용
   ```js
   let length = getLength('안녕하세요');
@@ -230,3 +231,30 @@
     ```
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 반복문
+  - 반복문이란?
+    ➡️ 같거나 비슷한 코드를 여러 번 실행시켜야 할 경우에 쓰는 구문
+  - 반복문의 종류
+    - for 구문
+      반복할 조건을 `초기화`, `조건식`, `증감문` 순으로 넣어준다
+      이 때 시작 조건은 `i`로 설정하는것이 좋다. `index`에서 `i`를 따왔기 때문
+      `i`, `j` ... 순으로 설정
+      ```js
+      let sum = 1;
+      for (let i = 0; i <= 4; i++) {
+        sum = sum + i;
+      }
+      ```
+    - while 구문
+      반복할 조건 중 `초기화`, `증감문`은 따로 적고 조건식만 괄호안에 넣는다.
+      ```js
+      // 조건이 true일 때만 반복, false시 중단
+      let sum = 1;
+      let i = 2;
+      while (i <= 4) {
+        sum = sum + i;
+        i++;
+      } // 10
+      ```
+      초기화와 증감문이 필요없을 때 `while`을 사용하면 좋음
+⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
+## 배열의 반복
