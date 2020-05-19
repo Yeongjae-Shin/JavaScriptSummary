@@ -9,6 +9,7 @@
 7. [객체](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EA%B0%9D%EC%B2%B4)
 8. [배열의 메서드](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EA%B0%9D%EC%B2%B4)
 9. [reduce](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#reduce-%EA%BD%A4-%EC%96%B4%EB%A0%A4%EC%9B%80)
+10. [Scope](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#Scope)
 ## 변수와 타입
 - 변수는 상황에 따라 변할 수 있는 값
   - 변수 선언 ➡️ 선언은 한번만 한다
@@ -537,4 +538,6 @@
   }
   ```
 
+⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
+# Scope
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
