@@ -172,3 +172,59 @@
   console.log(myTime); // undefined myTime의 값이 없기 때문
   ```
   - `return`을 사용하면 출력이 된다.
+
+## 배열
+1. 배열은 순서가 있는 값이다.
+2. 순서와 값은 각각 `index`와 `element`로 부른다.
+3. `index`는 0이 아닌 1부터 번호를 매긴다.
+4. 배열의 예시
+  ```js
+  let myNumber = [73, 98, 86, 61, 96];
+  // myNumber라는 배열의 1번째 element는 98이다.
+  ```
+- 배열의 값을 변경할 수도 있다.
+  ```js
+  myNumber[1] = 33;
+  myNumber; // [73, 33, 86, 61, 96];
+  ```
+- 이차원으로 배열을 구성할 수도 있다.
+  ```js
+  let myNumber = [[13, 30], [73, 8], [44, 17]];
+  myNumber[1] // [73, 8]
+  myNumber[1][0] // 73
+  ```
+- 배열로 할 수 있는 것들
+  - 배열의 길이 구하기
+    ```js
+    let myNumber = [73, 98, 86, 61];
+    myNumber.length // 4
+    ```
+  - 요소 추가하기
+    ```js
+    let myNumber = [73, 98, 86, 61];
+    myNumber.push(96) // [73, 98, 86, 61, 96]
+    // push 메서드는 배열의 가장 마지막에 요소 추가
+    ```
+  - 요소 삭제하기
+    ```js
+    let myNumber = [73, 98, 86, 61];
+    myNumber.pop(); // [73, 98, 86]
+    // 가장 마지막 요소 삭제
+    ```
+  - 첫 번째 요소 삭제
+    ```js
+    let myNumber = [73, 98, 86, 61];
+    myNumber.shift(); // [98, 86, 61]
+    ```
+  - 맨 앞에 요소 추가
+  ```js
+    let myNumber = [73, 98, 86, 61];
+    myNumber.unshift(96) // [96, 73, 86, 61]
+    ```
+  - 배열인지 아닌지 판단
+  ```js
+    let myNumber = [73, 98, 86, 61];
+    Array.isArray(myNumber) // true
+    // Array.isArray 메서드는 항상 boolean값 리턴
+    ```
+## 반복문
