@@ -6,6 +6,8 @@
 4. [배열](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%B0%B0%EC%97%B4)
 5. [반복문](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%B0%98%EB%B3%B5%EB%AC%B8)
 6. [배열의 반복](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%B0%B0%EC%97%B4%EC%9D%98-%EB%B0%98%EB%B3%B5)
+7. [객체](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EA%B0%9D%EC%B2%B4)
+8. [배열의 메서드](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EA%B0%9D%EC%B2%B4)
 ## 변수와 타입
 - 변수는 상황에 따라 변할 수 있는 값
   - 변수 선언 ➡️ 선언은 한번만 한다
@@ -305,7 +307,7 @@
       let noQuote = 'city'
       user[noQuote] // 'Seoul'
       ```
-      - dot/bracket notation을 이용해 값을 추가 가능
+    - dot/bracket notation을 이용해 값을 추가 가능
       ```js
       user.isMale = true;
       user.tags = ['JavaScript', 'TIL'];
@@ -314,12 +316,12 @@
       user;
       // {name: "Steve", city: "Seoul", isMale: true, tags: ['JavaScript', 'TIL'], category: "코딩"}
       ```
-      - delete를 이용해 삭제도 가능
+    - delete를 이용해 삭제도 가능
       ```js
       delete user.name;
       // name: 'Steve' 가 없어짐
       ```
-      - in을 이용해 해당 키가 객체에 존재하는지 확인 가능
+    - in을 이용해 해당 키가 객체에 존재하는지 확인 가능
       ```js
       'name' in user; // true
       'email' in user; // false
