@@ -1,4 +1,3 @@
-# 자바스크립트 정리
 # 목차
 1. [변수와 타입](https://github.com/Yeongjae-Shin/JavaScriptSummary#%EB%B3%80%EC%88%98%EC%99%80-%ED%83%80%EC%9E%85)
 2. [조건문](https://github.com/Yeongjae-Shin/JavaScriptSummary#%EC%A1%B0%EA%B1%B4%EB%AC%B8)
@@ -10,7 +9,8 @@
 8. [배열의 메서드](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EA%B0%9D%EC%B2%B4)
 9. [reduce](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#reduce-%EA%BD%A4-%EC%96%B4%EB%A0%A4%EC%9B%80)
 10. [Scope](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#Scope)
-11. [변수](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#Scope)
+11. [변수](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%B3%80%EC%88%98)
+12. [Closure](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#closure-%EB%A7%A4%EC%9A%B0-%EC%96%B4%EB%A0%A4%EC%9B%80)
 ## 변수와 타입
 - 변수는 상황에 따라 변할 수 있는 값
   - 변수 선언 ➡️ 선언은 한번만 한다
@@ -568,6 +568,7 @@
   1. Local Scope에서 Global Scope의 변수/함수에 접근 가능
   2. Local Scope에서 정의된 변수/함수는 Global Scope에서 사용 불가
 - Scope는 중첩이 가능
+
   ex) 함수 안의 함수
 - Global Scope는 최상단의 scope로 전역 변수는 어디서든 접근 가능
 - 지역변수는 함수 내에서 전역변수보다 더 높은 우선순위를 가짐
@@ -590,8 +591,10 @@
 - var vs let
   - 변수를 정의하는 또다른 키워드 var
     - JavaScript는 기본적으로 **함수 단위**로 자신만의 scope를 가진다.
+
       ➡️ var (old way👎)
     - 그러나 Block 단위로 scope를 구분 했을 때 예측하기 쉬운 코드를 작성할 수 있다.
+
       ➡️ let
 - const
   - **값이 변하지 않는** 변수, 즉 상수를 정의할 때 사용하는 키워드
@@ -603,23 +606,26 @@
   |유효 범위|Block Scope|Block Scope|Function Scope|
   |값 재정의|가능|불가능|가능|
   |재선언|불가능|불가능|**불**가능|
+
   ➡️ var의 재선언은 가능했으나 불가능으로 바뀜
 - 전역변수와 window 객체
   - 전역 범위를 대표하는 객체 window
   - Global Scope에서 선언된 함수, 그리고 var 키워드를 이용해 선언된 변수는 window 객체와 연결
   - 콘솔창에 window를 입력하면 window 객체가 출력됨
-  ```js
-  var myName = 'Paul';
-  console.log(window.myName); // 'Paul'
+    ```js
+    var myName = 'Paul';
+    console.log(window.myName); // 'Paul'
 
-  function foo () {
-    console.log('bar');
-  }
-  console.log(foo === window.foo); // true
-  ```
+    function foo () {
+      console.log('bar');
+    }
+    console.log(foo === window.foo); // true
+    ```
   - 전역 범위에 너무 많은 변수를 선언하지 않도록 주의!
+
     ➡️ 전역 영역은 최상위 scope이기 때문에 어디서 어떻게 이용될지 모름
 - 선언 없이 초기화된 전역 변수
+
   🔥**절대로 선언 키워드(var, let, const)없이 변수를 초기화하지 말 것**🔥
   ```js
   function showAge () {
