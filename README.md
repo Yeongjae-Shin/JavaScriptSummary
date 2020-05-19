@@ -8,7 +8,7 @@
 6. [배열의 반복](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%B0%B0%EC%97%B4%EC%9D%98-%EB%B0%98%EB%B3%B5)
 7. [객체](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EA%B0%9D%EC%B2%B4)
 8. [배열의 메서드](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EA%B0%9D%EC%B2%B4)
-9. [reduce](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#reduce)
+9. [reduce](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#reduce-%EA%BD%A4-%EC%96%B4%EB%A0%A4%EC%9B%80)
 ## 변수와 타입
 - 변수는 상황에 따라 변할 수 있는 값
   - 변수 선언 ➡️ 선언은 한번만 한다
