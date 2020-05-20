@@ -1129,13 +1129,13 @@
 - 서버와 클라이언트
   - 요청하는 주체: 클라이언트
   - 요청에 따른 응답을 주는 서버
+  ![스크린샷 2020-05-20 오후 8 16 11](https://user-images.githubusercontent.com/60685930/82466157-03d54a00-9afb-11ea-8b13-a0c58a2cfa5d.png)
 
-  (이미지)
 - 서버에게 요청하기
   - 일반적으로 서버에게 HTTP(URL) 요청 후, 응답을 처리
   - 응답은 다양한 형태로 받을 수 있음(JSON, HTML, Plain text 등)
+  ![스크린샷 2020-05-20 오후 8 17 16](https://user-images.githubusercontent.com/60685930/82466210-12bbfc80-9afb-11ea-8375-11a0350270a4.png)
 
-  (이미지)
 - HTTP 요청은 fetch API로
   ```js
   fetch('http://서버주소/weather?q=Seoul')
@@ -1162,10 +1162,9 @@
   - 방법: `POST` 메서드
   - 주소: /posts
   - 내용
+  ![스크린샷 2020-05-20 오후 8 20 06](https://user-images.githubusercontent.com/60685930/82466256-223b4580-9afb-11ea-9ef7-9e51f20e8fad.png)
 
-  (이미지)
-
-  보통 새로운 글의 ID를 반환
+    **보통 새로운 글의 ID를 반환**
   ```js
   let newPost = {
     "userID": 1,
@@ -1198,9 +1197,8 @@
   - 모든 함수 scope내에서 자동으로 설정되는 특수한 식별자
   - execution context의 구성 요소 중 하나로, 함수가 실행되는 동안 이용할 수 있다.
 
-🔥**this의 4가지 패턴**🔥
+- this의 4가지 패턴
   1. Global & Function Invocation
-
     ```js
     var name = 'Global Variable';
     console.log(this.name); // Global Variable
