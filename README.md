@@ -749,7 +749,7 @@
 ## 객체지향 JavaScript
 - 객체 지향 프로그래밍?
 
-  ➡️ 하나의 모델이 되는 **청사진(class)**을 만들고, 그 청사진을 바탕으로 한 **객체(instance)**를 만드는 프로그래밍 패턴
+  ➡️ 하나의 모델이 되는 청사진(class)을 만들고, 그 청사진을 바탕으로 한 객체(instance)를 만드는 프로그래밍 패턴
   ```js
   function Car (color) { // class
     let avante = new Car('blue'); // instance
@@ -781,11 +781,11 @@
 - 속성과 메서드
   - class에 속성과 메서드를 정의하고 instance에서 이용함
 
-  |속성|메서드|
-  |:---:|:---:|
-  |brand|refuel()|
-  |name|setSpeed()|
-  |color|drive()|
+    |속성|메서드|
+    |:---:|:---:|
+    |brand|refuel()|
+    |name|setSpeed()|
+    |color|drive()|
 
   ➡️ 이와 같이 OOP는 현실 세계를 기반으로 프로그래밍 모델을 만들 때 유용함
 - class: 속성의 정의
@@ -847,6 +847,7 @@
   - prototype: 모델의 청사진을 만들 때 쓰는 원형 객체(original form)
   - constructor: instance가 초기화 될 때 실행하는 **생성자** 함수
   - this: 함수가 실행될 때, 해당 scope마다 생성되는 고유한 **실행 context(execution context)**.
+
     `new` 키워드로 instance를 생성했을 때 해당 instance가 this의 값이 됨
 - 요약
   ```js
@@ -1128,10 +1129,12 @@
 - 서버와 클라이언트
   - 요청하는 주체: 클라이언트
   - 요청에 따른 응답을 주는 서버
+
   (이미지)
 - 서버에게 요청하기
   - 일반적으로 서버에게 HTTP(URL) 요청 후, 응답을 처리
   - 응답은 다양한 형태로 받을 수 있음(JSON, HTML, Plain text 등)
+
   (이미지)
 - HTTP 요청은 fetch API로
   ```js
@@ -1159,6 +1162,7 @@
   - 방법: `POST` 메서드
   - 주소: /posts
   - 내용
+
   (이미지)
   보통 새로운 글의 ID를 반환
   ```js
@@ -1192,7 +1196,8 @@
 - `this` Keyword
   - 모든 함수 scope내에서 자동으로 설정되는 특수한 식별자
   - execution context의 구성 요소 중 하나로, 함수가 실행되는 동안 이용할 수 있다.
-🔥**`this`의 5가지 패턴**🔥
+
+🔥**this의 4가지 패턴**🔥
   1. Global & Function Invocation
     ```js
     var name = 'Global Variable';
