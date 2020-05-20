@@ -1164,6 +1164,7 @@
   - 내용
 
   (이미지)
+
   보통 새로운 글의 ID를 반환
   ```js
   let newPost = {
@@ -1199,6 +1200,7 @@
 
 🔥**this의 4가지 패턴**🔥
   1. Global & Function Invocation
+
     ```js
     var name = 'Global Variable';
     console.log(this.name); // Global Variable
@@ -1215,7 +1217,7 @@
       inner();
     }
     outer();
-
+    
     function outer2 () {
       var closure = function () {
         console.log(this.name); // Global Variable
