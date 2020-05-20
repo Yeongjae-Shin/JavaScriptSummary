@@ -44,9 +44,10 @@
   ```
 - 변수에는 **공백**을 넣지 않는다. 제일 첫 글자 제외 항상 단어의 첫 글자는 대문자로 표현하여 구분
   - 이때 변수가 생긴 모양이 낙타의 등과 같다하여 `Camel Case`라고 부름. `python`은 `Snake Case`
-  ```
-  variable_example
-  ```
+    ```
+    areaOfCircle // camel case
+    variable_example // snake case
+    ```
 
 - 변수는 동일한 변수를 대입할 수 있다.
   ```js
