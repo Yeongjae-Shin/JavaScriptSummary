@@ -11,37 +11,37 @@
 10. [Scope](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#Scope)
 11. [변수](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%B3%80%EC%88%98)
 12. [Closure](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#closure-%EB%A7%A4%EC%9A%B0-%EC%96%B4%EB%A0%A4%EC%9B%80)
-13. [객체지향 프로그래밍]()
-14. [매개변수]()
-15. [비동기 호출]()
-16. [타이머 API]()
-17. [서버 요청하기]()
-18. [this]()
-19. [Prototype]()
-20. [함수 메서드]()
-21. [재귀함수]()
+13. [객체지향 프로그래밍](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-javascript)
+14. [매개변수](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98)
+15. [비동기 호출](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%B9%84%EB%8F%99%EA%B8%B0-%ED%98%B8%EC%B6%9C)
+16. [타이머 API](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%ED%83%80%EC%9D%B4%EB%A8%B8-api)
+17. [서버 요청하기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EC%84%9C%EB%B2%84-%EC%9A%94%EC%B2%AD%ED%95%98%EA%B8%B0)
+18. [this](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#this)
+19. [Prototype](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#prototype)
+20. [함수 메서드](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%ED%95%A8%EC%88%98-%EB%A9%94%EC%84%9C%EB%93%9C)
+21. [재귀함수](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EC%9E%AC%EA%B7%80%ED%95%A8%EC%88%98)
 ## 변수와 타입
 - 변수는 상황에 따라 변할 수 있는 값
   - 변수 선언 ➡️ 선언은 한번만 한다
-  ```js
-  let myName;
-  ```
+    ```js
+    let myName;
+    ```
   - 값 할당
-  ```js
-  myName = 'Steve';
-  ```
+    ```js
+    myName = 'Steve';
+    ```
   - 최종 형태
-  ```js
-  let myName = 'Steve';
-  ```
+    ```js
+    let myName = 'Steve';
+    ```
   
 - 표현식(expression)에서 변수 활용 가능
   - 결과물도 변수로 담을 수 있다.
-  ```js
-  let pi = 3.14;
-  let radius = 5;
-  let areaOfCircle = pi * radius * radius;
-  ```
+    ```js
+    let pi = 3.14;
+    let radius = 5;
+    let areaOfCircle = pi * radius * radius;
+    ```
 - 변수에는 **공백**을 넣지 않는다. 제일 첫 글자 제외 항상 단어의 첫 글자는 대문자로 표현하여 구분
   - 이때 변수가 생긴 모양이 낙타의 등과 같다하여 `Camel Case`라고 부름. `python`은 `Snake Case`
     ```
@@ -55,7 +55,6 @@
   sum = sum + 2; // 한번 선언했던 변수를 다시 사용할 땐 let 키워드 사용 x
   sum = sum + 3;
   sum = sum + 4;
-  
   // 10
   ```
 - 변수의 타입
@@ -65,17 +64,17 @@
   
 - 여러개의 타입이 섞인 경우
   - 배열
-  ```js
-  let fruits = ['banana', 'apple', 'pineapple'];
-  ```
+    ```js
+    let fruits = ['banana', 'apple', 'pineapple'];
+    ```
   - 객체
-  ```js
-  let person = {
-    name: 'Steve',
-    age: 32.
-    city: 'Seoul'
-  };
-  ```
+    ```js
+    let person = {
+      name: 'Steve',
+      age: 32.
+      city: 'Seoul'
+    };
+    ```
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 조건문
   1. 조건문을 배우기 위해선 Boolean 타입에 대한 이해 필요
@@ -106,15 +105,15 @@
 
 - 조건문
   - 조건문의 기본 형식
-  ```js
-  if (조건1) { // 여기서 조건에는 Boolean으로 결과가 나오는 표현식이 들어감
-    // 조건1이 통과할 경우
-  } else if (조건2) {
-    // 조건1이 통과하지 않고 조건2가 통과할 경우
-  } else { // 명령이 한 줄일 경우 else 생략 가능
-    // 모든 조건이 통과하지 않는 경우
-  }
-  ```
+    ```js
+    if (조건1) { // 여기서 조건에는 Boolean으로 결과가 나오는 표현식이 들어감
+      // 조건1이 통과할 경우
+    } else if (조건2) {
+      // 조건1이 통과하지 않고 조건2가 통과할 경우
+    } else { // 명령이 한 줄일 경우 else 생략 가능
+      // 모든 조건이 통과하지 않는 경우
+    }
+    ```
 
 - 두 가지 조건이 한번에 적용되는 경우
   - 논리연산자 `AND` ➡️ 둘 다 `true`일 경우
@@ -183,11 +182,11 @@
   timeToGoHome(20, 100); // 5
   ```
   - 함수 바깥으로 결과를 가져오려면?
-  ```js
-  console.log(time); // ReferenceError
-  let myTime = timeToGoHome(20, 100);
-  console.log(myTime); // undefined myTime의 값이 없기 때문
-  ```
+    ```js
+    console.log(time); // ReferenceError
+    let myTime = timeToGoHome(20, 100);
+    console.log(myTime); // undefined myTime의 값이 없기 때문
+    ```
   - `return`을 사용하면 출력이 된다.
 
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
@@ -277,24 +276,23 @@
       ```
       초기화와 증감문이 필요없을 때 `while`을 사용하면 좋음
     - forEach 구문 (명령형 반복문을 함수형으로 작성하기)
-
-    **함수를 인자로 받음**
-      ```js
-      let users = [
-        { name: 'Tim', age: 40 },
-        { name: 'Satya', age: 30 },
-        { name: 'Sundar', age: 50 }
-      ];
-      // 이름을 출력하기 위해 for문 사용
-      for (let i = 0; i < users.length; i++) {
-        console.log('Name: ' + users[i].name);
-      } // Name: Tim Name: Satya Name: Sundar
-      // 이것을 간단하게 함수 정의와 forEach로 구현 가능
-      function printName (user) {
-        console.log('Name: ' + user.name);
-      }
-      user.forEach(printName); // Name: Tim Name: Satya Name: Sundar
-      ```
+      - **함수를 인자로 받음**
+        ```js
+        let users = [
+          { name: 'Tim', age: 40 },
+          { name: 'Satya', age: 30 },
+          { name: 'Sundar', age: 50 }
+        ];
+        // 이름을 출력하기 위해 for문 사용
+        for (let i = 0; i < users.length; i++) {
+          console.log('Name: ' + users[i].name);
+        } // Name: Tim Name: Satya Name: Sundar
+        // 이것을 간단하게 함수 정의와 forEach로 구현 가능
+        function printName (user) {
+          console.log('Name: ' + user.name);
+        }
+        user.forEach(printName); // Name: Tim Name: Satya Name: Sundar
+        ```
     - for...in 구문 (객체의 프로퍼티를 순환할 때)
       - 기본 형태
         ```js
@@ -419,20 +417,20 @@
   **기존 배열과 length는 같지만 모양이 다른 경우**
   - 추출할 수 있는 함수
     - users라는 배열의 객채에서 name의 값만 추출하기
-    ```js
-    let users = [
-      { name: 'Tim', age: 40 },
-      { name: 'Satya', age: 30 },
-      { name: 'Sundar', age: 50 }
-    ];
+      ```js
+      let users = [
+        { name: 'Tim', age: 40 },
+        { name: 'Satya', age: 30 },
+        { name: 'Sundar', age: 50 }
+      ];
 
-    function getName (user) {
-      return user.name;
-    }
-    getName({ name: 'Tim', age: 40 }) // 이것을 3번 반복해야함
-    // 따라서
-    users.map(getName) // ['Tim', 'Satya', 'Sundar']
-    ```
+      function getName (user) {
+        return user.name;
+      }
+      getName({ name: 'Tim', age: 40 }) // 이것을 3번 반복해야함
+      // 따라서
+      users.map(getName) // ['Tim', 'Satya', 'Sundar']
+      ```
 ### 4. 조건에 따라 걸러내기 (filter)
   **immutable하기 때문에 새로운 배열 return**
   - 객체에서 나이가 40 이상인 사람 걸러내기
@@ -584,17 +582,17 @@
 - 지역변수는 함수 내에서 전역변수보다 더 높은 우선순위를 가짐
 - Function Scope vs Block Scope
   - Block: 중괄호로 시작하고 끝나는 단위
-  ```js
-  if (true) {
-    console.log('I am in the block!');
-  }
+    ```js
+    if (true) {
+      console.log('I am in the block!');
+    }
 
-  for (let i = 0; i < 10; i++) {
-    console.log(i);
-  }
+    for (let i = 0; i < 10; i++) {
+      console.log(i);
+    }
 
-  { console.log('it works!') }
-  ```
+    { console.log('it works!') }
+    ```
 
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 변수
@@ -679,7 +677,7 @@
   // inner
   // global
   ```
-  **여기서 클로저 함수는 `innerFn()`인데 클로저 함수 안에서는 지역변수(innerVar), 외부 함수의 변수(outerVar), 전역변수(globalVar) 모두 접근 가능**
+  **여기서 클로저 함수는 `innerFn()`. 클로저 함수 안에서는 지역변수(innerVar), 외부 함수의 변수(outerVar), 전역변수(globalVar) 모두 접근 가능**
 - 유용한 클로저 예제
   - 커링: 함수 하나가 n개의 인자를 받는 대신, n개의 함수를 만들어 각각 인자를 받게 하는 법
     ```js
@@ -751,7 +749,7 @@
 ## 객체지향 JavaScript
 - 객체 지향 프로그래밍?
 
-  ➡️ 하나의 모델이 되는 청사진(class)을 만들고, 그 청사진을 바탕으로 한 객체(instance)를 만드는 프로그래밍 패턴
+  ➡️ 하나의 모델이 되는 **청사진(class)**을 만들고, 그 청사진을 바탕으로 한 **객체(instance)**를 만드는 프로그래밍 패턴
   ```js
   function Car (color) { // class
     let avante = new Car('blue'); // instance
@@ -782,11 +780,13 @@
   ```
 - 속성과 메서드
   - class에 속성과 메서드를 정의하고 instance에서 이용함
+
   |속성|메서드|
   |:---:|:---:|
   |brand|refuel()|
   |name|setSpeed()|
   |color|drive()|
+
   ➡️ 이와 같이 OOP는 현실 세계를 기반으로 프로그래밍 모델을 만들 때 유용함
 - class: 속성의 정의
   - ES5
@@ -846,7 +846,8 @@
 - prototype? constructor? this?
   - prototype: 모델의 청사진을 만들 때 쓰는 원형 객체(original form)
   - constructor: instance가 초기화 될 때 실행하는 **생성자** 함수
-  - this: 함수가 실행될 때, 해당 scope마다 생성되는 고유한 **실행 context(execution context)**. `new` 키워드로 instance를 생성했을 때 해당 instance가 this의 값이 됨
+  - this: 함수가 실행될 때, 해당 scope마다 생성되는 고유한 **실행 context(execution context)**.
+    `new` 키워드로 instance를 생성했을 때 해당 instance가 this의 값이 됨
 - 요약
   ```js
   function Car (brand, name, color) { // Car는 class
@@ -1003,7 +1004,8 @@
       b-2. 카페라떼가 완성되면 직원이 손님2를 부른다. ➡️ callback
       
       b-3. 카페라떼를 손님2에게 전달한다.
-  **a-1 ~ b-3이 비동기 영역임**
+
+    **a-1 ~ b-3이 비동기 영역임**
 - 비동기적으로 커피 주문 해보기
   ```js
   function waitAsync (callback, ms) {
@@ -1058,13 +1060,13 @@
   }
   ```
 - 비동기의 주요 사례
-  1. DOM Element의 이벤트 핸들러
+  - DOM Element의 이벤트 핸들러
     - 마우스, 키보드 입력(click, keydown 등)
     - 페이지 로딩(DOMContetLoaded 등)
-  2. 타이머
+  - 타이머
     - 타이머 API(setTimeout 등)
     - 애니메이션 API(requestAnimationFrame)
-  3. 서버에 자원 요청 응답
+  - 서버에 자원 요청 응답
     - fetch API
     - AJAX(XHR)
 - 브라우저의 비동기 함수 작동 원리를 알려면?
@@ -1190,7 +1192,7 @@
 - `this` Keyword
   - 모든 함수 scope내에서 자동으로 설정되는 특수한 식별자
   - execution context의 구성 요소 중 하나로, 함수가 실행되는 동안 이용할 수 있다.
-- 🔥**`this`의 5가지 패턴**🔥
+🔥**`this`의 5가지 패턴**🔥
   1. Global & Function Invocation
     ```js
     var name = 'Global Variable';
@@ -1363,9 +1365,9 @@
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
 ## 함수 메서드
 - 함수를 실행하는 다양한 방법
-  1. function(method) 호출
-  2. new 키워드를 이용한 추출
-  3. 함수 메서드 `.call`, `.apply`, `.bind` 이용
+  - function(method) 호출
+  - new 키워드를 이용한 추출
+  - 함수 메서드 `.call`, `.apply`, `.bind` 이용
 - call, apply 복습
   ```js
   function add (x, y) {
@@ -1491,4 +1493,5 @@
 - 결국 5 * 4 * 3 * 2 * 1이 되어 120이 나옴
 
 🎉🎉🎉**수고하셨습니다**🎉🎉🎉
+
 ⬆️ [목차로 가기](https://github.com/Yeongjae-Shin/JavaScriptSummary/blob/master/README.md#%EB%AA%A9%EC%B0%A8)
