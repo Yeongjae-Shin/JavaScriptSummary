@@ -63,7 +63,7 @@
   - 문자열: `'Hello'`
   - 불리언: `true/false`
   
-- 여러개의 타입이 타입이 섞인 경우
+- 여러개의 타입이 섞인 경우
   - 배열
   ```js
   let fruits = ['banana', 'apple', 'pineapple'];
