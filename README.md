@@ -1385,7 +1385,7 @@
 ## 함수 메서드
 - 함수를 실행하는 다양한 방법
   - function(method) 호출
-  - new 키워드를 이용한 추출
+  - new 키워드를 이용한 호출
   - 함수 메서드 `.call`, `.apply`, `.bind` 이용
 - call, apply 복습
   ```js
