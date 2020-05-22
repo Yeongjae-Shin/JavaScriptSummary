@@ -71,7 +71,7 @@
     ```js
     let person = {
       name: 'Steve',
-      age: 32.
+      age: 32,
       city: 'Seoul'
     };
     ```
