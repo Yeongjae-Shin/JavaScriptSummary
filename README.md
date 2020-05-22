@@ -488,7 +488,7 @@
     ```js
     [0, 1, 2, 3, 4].reduce(function (accumulator, value, index, array) {
       return accumulator + value;
-    });
+    }); // 10
     ```
     |callback|accumulator|value|index|array|return|
     |:------:|:---:|:---:|:---:|:---:|:---:|
@@ -496,6 +496,19 @@
     |2번째 호출|1|2|2|[0, 1, 2, 3, 4]|3|
     |3번째 호출|3|3|3|[0, 1, 2, 3, 4]|6|
     |4번째 호출|6|4|4|[0, 1, 2, 3, 4]|10|
+  - reduce 활용 예제(초기값을 설정하는 경우)
+    ```js
+    [0, 1, 2, 3, 4].reduce(function (accumulator, value, index, array) {
+      return accumulator + value;
+    }, 10); // 20
+    ```
+    |callback|accumulator|value|index|array|return|
+    |:------:|:---:|:---:|:---:|:---:|:---:|
+    |1번째 호출|10|0|0|[0, 1, 2, 3, 4]|10|
+    |2번째 호출|10|1|1|[0, 1, 2, 3, 4]|11|
+    |3번째 호출|11|2|2|[0, 1, 2, 3, 4]|13|
+    |4번째 호출|13|3|3|[0, 1, 2, 3, 4]|16|
+    |5번째 호출|16|4|4|[0, 1, 2, 3, 4]|20|
 
 - 배열에서 문자열로 변형
   ```js
